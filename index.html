@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech Fiesta</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"> Logo </a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="Images/stars.png" id="stars">
+            <img src="Images/moon.png" id="moon">
+            <img src="Images/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Your Name</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="Images/mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Lorem ipsum</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nulla nunc, auctor vel libero eget, facilisis varius nulla. Vestibulum eu sapien nec magna imperdiet ultricies. Mauris tempus eget velit eget interdum. Mauris vehicula suscipit augue non laoreet. Morbi finibus laoreet mauris, id condimentum dolor tristique non. Aliquam mollis, tortor ultricies lobortis sodales, nisl diam sagittis est, in varius enim tellus eget lorem. Sed vitae molestie turpis, sit amet tincidunt elit.
+                <br><br>
+                Praesent a gravida tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vehicula nisi luctus mattis bibendum. Mauris congue tellus sit amet posuere placerat. Nulla vitae elit commodo, suscipit justo quis, scelerisque nunc. Nam tellus ligula, pulvinar eget convallis sit amet, vehicula nec ipsum. In sodales, turpis eget pulvinar fringilla, risus orci tempus massa, vitae vehicula justo nulla eget lacus. In ut urna ac urna imperdiet ultricies a vel odio. Praesent quis tincidunt lacus. Vivamus quis lorem aliquam, dapibus nisl vitae, sodales nibh. Fusce tempor dolor ut dolor tristique, nec laoreet tellus volutpat. Nam vel leo eget arcu pellentesque rhoncus. Morbi eu ligula in turpis iaculis hendrerit eu id turpis. Pellentesque scelerisque quam non purus condimentum finibus. Curabitur et tempor odio. Curabitur ut elit sodales est rutrum condimentum.
+                <br><br>
+                Nullam eu dapibus lectus, id lacinia massa. Donec luctus posuere eros, sit amet tempor massa gravida sed. Aliquam ut orci vel est vehicula laoreet vestibulum at nisi. Cras suscipit justo sit amet maximus sagittis. Proin tellus libero, tincidunt et lobortis eu, eleifend eget odio. Etiam fermentum turpis ac tincidunt ultricies. Suspendisse in tincidunt leo, nec aliquam quam. Donec venenatis rhoncus tortor, ut vestibulum tellus vestibulum vitae.
+                <br><br>
+                Cras eu iaculis libero, ac hendrerit ipsum. Nam consectetur tortor ut nisl mollis mattis. Duis et diam lacus. Etiam ut tortor sed leo suscipit pretium. In hac habitasse platea dictumst. Fusce faucibus justo ut velit mattis, vel condimentum eros luctus. Integer consequat, nulla in rutrum accumsan, ante urna aliquam urna, at luctus risus felis vitae nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris ultricies accumsan diam ac porttitor.
+                <br><br>
+                Nulla tristique ipsum leo, ac tristique nisi efficitur sed. Mauris aliquam mattis nisl vitae malesuada. Maecenas ac varius risus. Vivamus leo felis, auctor at condimentum vel, mattis non enim. Vivamus et rutrum justo. Mauris quis neque nunc. Donec arcu purus, condimentum sit amet lectus ut, suscipit porta libero. Nam rhoncus gravida nisl, condimentum bibendum magna ultricies non. Nam quam neque, scelerisque ut felis et, gravida ullamcorper ligula. Proin sit amet luctus dolor. Quisque vitae sem eget neque aliquam laoreet non sed est. Aliquam semper dictum ex eu condimentum.
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header =document.querySelector('header');
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
