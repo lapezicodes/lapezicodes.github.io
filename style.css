@@ -101,6 +101,10 @@ section img#mountains_front {
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
+    transition: 0.3s;
+}
+#buton {
+    transition: 0.5s;
 }
 .sec {
     position: relative;
